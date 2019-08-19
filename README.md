@@ -13,6 +13,7 @@ Runs SSR benchmarks for:
 * Preact with `preact-compat`
 * Inferno
 * Svelte
+* Riot
 
 ## Instructions
 
