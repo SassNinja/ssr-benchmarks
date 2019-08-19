@@ -1,0 +1,30 @@
+<ItemSection>
+  <div>
+    <h2 if="{ state.showEven }">This item section is even</h2>
+    <div id="item-section{ props.id }" style="font-weight: 300; margin: 10px 20px;">
+      <slot />
+    </div>
+    <ItemSectionDescription />
+  </div>
+
+  <script>
+    import ItemSectionDescription from './ItemSectionDescription.riot'
+
+    export default {
+      state: {
+        even: false
+      },
+      onMounted(props) {
+        const even = props.id % 2 === 0
+
+        this.update({
+          even,
+          showEven: even
+        })
+      },
+      components: {
+        ItemSectionDescription
+      }
+    }
+  </script>
+</ItemSection>

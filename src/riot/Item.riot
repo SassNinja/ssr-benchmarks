@@ -1,0 +1,25 @@
+<Item>
+  <div class="item">
+    <TitleWrapper title="{ props.title }" />
+    <p class="item-content">{ props.content }</p>
+    <Image src="{ props.img }" />
+    <ul>
+      <li each="{ i in state.todos }" id="todo-{ i }">{ i }</li>
+    </ul>
+  </div>
+
+  <script>
+    import TitleWrapper from './TitleWrapper.riot'
+    import Image from './Image.riot'
+
+    export default {
+      state: {
+        todos: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+      },
+      components: {
+        TitleWrapper,
+        Image
+      }
+    }
+  </script>
+</Item>

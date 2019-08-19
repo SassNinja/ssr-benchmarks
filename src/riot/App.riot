@@ -1,0 +1,35 @@
+<App>
+  <ItemSectionGroupWrapper each="{ (item, i) in state.items }">
+    <ItemSectionGroup>
+      <ItemSection id="{ i }">
+        <Item if="{ i % 2 === 0 }" img="{ item.img }" title="{ item.title }" content="{ item.content }" />
+        <RichItem if="{ i % 2 !== 0 }" img="{ item.img }" title="{ item.title }" content="{ item.content }" />
+      </ItemSection>
+    </ItemSectionGroup>
+  </ItemSectionGroupWrapper>
+
+  <script>
+    import ItemSectionGroupWrapper from './ItemSectionGroupWrapper.riot'
+    import ItemSectionGroup from './ItemSectionGroup.riot'
+    import ItemSection from './ItemSection.riot'
+    import Item from './Item.riot'
+    import RichItem from './RichItem.riot'
+
+    export default {
+      state: {
+        items: []
+      },
+      components: {
+        ItemSectionGroupWrapper,
+        ItemSectionGroup,
+        ItemSection,
+        Item,
+        RichItem
+      },
+      onBeforeMount(props) {
+        this.state.items = props.items
+      }
+    }
+  </script>
+
+</App>

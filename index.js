@@ -10,16 +10,20 @@ const InfernoCompatApp = require('./src/inferno-compat.bundle');
 
 const SvelteApp = require('./src/svelte');
 
+const RiotApp = require('./src/riot');
+
 perform('react', ReactApp);
 perform('preact', PreactApp);
 perform('preact-compat', PreactCompatApp);
 perform('inferno', InfernoApp);
 perform('inferno-compat', InfernoCompatApp);
 perform('svelte', SvelteApp);
+perform('riot', RiotApp);
 
 report('react');
 report('preact');
 report('preact-compat');
 report('inferno');
 report('inferno-compat');
-report('svelte', true);
+report('svelte');
+report('riot', true);

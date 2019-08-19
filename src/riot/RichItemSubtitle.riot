@@ -1,0 +1,17 @@
+<RichItemSubtitle>
+  <div style="font-size: 20" id="{ props.id }">
+    <RichItemSubTitleWrapper>
+      <slot />
+    </RichItemSubTitleWrapper>
+  </div>
+
+  <script>
+    import RichItemSubTitleWrapper from './RichItemSubTitleWrapper.riot'
+
+    export default {
+      components: {
+        RichItemSubTitleWrapper
+      }
+    }
+  </script>
+</RichItemSubtitle>

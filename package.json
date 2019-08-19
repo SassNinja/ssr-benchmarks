@@ -9,6 +9,8 @@
     "start:dev": "node index"
   },
   "dependencies": {
+    "@riotjs/compiler": "^4.3.10",
+    "@riotjs/ssr": "^4.1.0",
     "cli-table": "^0.3.1",
     "inferno": "^1.2.0",
     "inferno-compat": "^1.2.0",
@@ -19,6 +21,7 @@
     "preact-render-to-string": "^3.4.1",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
+    "riot": "^4.4.0",
     "rollup-plugin-commonjs": "^7.0.0",
     "rollup-plugin-replace": "^1.1.1",
     "svelte": "^1.6.3"
